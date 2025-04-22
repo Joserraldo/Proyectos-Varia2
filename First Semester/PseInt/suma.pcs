@@ -1,0 +1,35 @@
+Algoritmo sin_titulo
+	Definir numf, contador, suma, op, n Como Numero
+	Escribir "Introduzca hasta que numero quiere sumar"
+	Leer numf
+	Escribir "[TODOS LOS NUMEROS = 1] [SOLO PARES = 2] [SOLO IMPARES]"
+	Escribir "Introduzca la operacion a realizar"
+	Leer op
+	contador <- 0
+	n <- 1
+	Mientras contador < numf Hacer
+		contador <- contador + 1
+		Si op = 1 Entonces
+			suma <- suma + n
+			n <- n + 1
+			
+		SiNo 
+			Si op = 2 Entonces	
+				Si n mod 2 = 0 Entonces
+					suma <- suma + n
+				FinSi
+				n <- n + 1
+			SiNo 
+				Si op = 3 Entonces
+					Si n mod 2 <> 0 Entonces
+						suma <- suma + n
+					FinSi
+					n <- n + 1
+				FinSi
+			FinSi
+			
+		FinSi
+		
+	FinMientras
+	Escribir "La suma de los numeros respecto a la operacion escogida es de = ", suma
+FinAlgoritmo
